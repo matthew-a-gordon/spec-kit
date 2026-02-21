@@ -279,6 +279,7 @@ Additional commands for enhanced quality and validation:
 | `/speckit.clarify`   | Clarify underspecified areas (recommended before `/speckit.plan`; formerly `/quizme`)                                                |
 | `/speckit.analyze`   | Cross-artifact consistency & coverage analysis (run after `/speckit.tasks`, before `/speckit.implement`)                             |
 | `/speckit.checklist` | Generate custom quality checklists that validate requirements completeness, clarity, and consistency (like "unit tests for English") |
+| `/speckit.verify`    | Verify implementation completeness: check all tasks done, deliverables present, execute TESTING.md CLI checks, and generate `VERIFICATION_REPORT.md` |
 
 ### Environment Variables
 
