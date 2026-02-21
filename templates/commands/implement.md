@@ -135,4 +135,18 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Confirm the implementation follows the technical plan
    - Report final status with summary of completed work
 
+10. **Polish phase — mandatory deliverable (TESTING.md)**:
+
+   After all user story work is complete and quality gates pass, create `{FEATURE_DIR}/TESTING.md`:
+
+   - **Purpose**: Enable a reviewer to independently verify the implementation without reading source code or test files
+   - **Required content**:
+     - Quick-start command: a single command (or minimal sequence) to exercise core functionality
+     - Per-user-story verification: exact command(s), expected output, plain-language description of what is being proved
+     - Manual inspection steps: for behaviors not captured by automated tests
+     - Integration test instructions: startup command + test command if external services are required
+     - Files changed: a table of every modified or created file with a one-line description
+   - **Format**: Markdown. Written for a technical reviewer not present during implementation. Use concrete commands, not prose. State expected outputs explicitly.
+   - **Goal**: A reviewer running `speckit.verify` should be able to validate the implementation from TESTING.md alone.
+
 Note: This command assumes a complete task breakdown exists in tasks.md. If tasks are incomplete or missing, suggest running `/speckit.tasks` first to regenerate the task list.

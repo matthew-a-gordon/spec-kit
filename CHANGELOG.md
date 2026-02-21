@@ -7,6 +7,13 @@ All notable changes to the Specify CLI and templates are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **`speckit.verify` command**: New command that executes TESTING.md, checks task completion, and generates a `VERIFICATION_REPORT.md`. Fits at the end of the workflow: `specify → clarify → plan → tasks → analyze → implement → verify`. Four verification tiers: completion (task checkbox count), deliverable presence, CLI (executes bash blocks from TESTING.md), and browser (agent-agnostic UI verification using available tools).
+- **TESTING.md deliverable standard**: `speckit.implement` now mandates creation of `TESTING.md` in the Polish phase — a reviewer-facing verification guide with per-story commands, expected outputs, manual inspection steps, and a files-changed table. Enables independent verification without reading source code. `speckit.verify` treats TESTING.md absence as WARN (not FAIL) for backwards compatibility.
+
 ## [0.1.5] - Unreleased
 
 ### Fixed
